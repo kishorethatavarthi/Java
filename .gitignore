@@ -1,0 +1,17 @@
+/.metadata/
+
+# Compiled Java files
+*.class
+
+# Eclipse build output
+/bin/
+/target/
+
+# Eclipse project files
+.project
+.classpath
+.settings/
+
+# OS files
+.DS_Store
+
