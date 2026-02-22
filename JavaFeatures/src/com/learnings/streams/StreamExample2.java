@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 //First Non Repeating character in a string
 public class StreamExample2 {
 	public static void main(String[] args) {
-		String str = "aabbccdeefff";
+		String str = "aabbccdeefffg";
 		Character ch = str.chars()
 				       .mapToObj(c->(char)c)
 				       .collect(Collectors.groupingBy(c->c,LinkedHashMap::new,Collectors.counting()))
