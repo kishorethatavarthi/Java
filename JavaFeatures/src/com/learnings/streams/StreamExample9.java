@@ -13,7 +13,7 @@ public class StreamExample9 {
 	
 	public static void main(String[] args) {
 		Employee e1 = new Employee(1, "kishore","CSE", 10000);
-		Employee e2 = new Employee(2,"vinay","CSE",100);
+		Employee e2 = new Employee(2,"vinay","CSE",10000);
 		Employee e3 = new Employee(3,"rvr","ECE",900.12);
 		Employee e4 = new Employee(4, "kish", "CSE",800.14);
 		Employee e5 = new Employee(5,"vin","Mech",657);
@@ -21,7 +21,9 @@ public class StreamExample9 {
 		
 		List<Employee> list = List.of(e1,e2,e3,e4,e5,e6);
 		System.out.println("==========Highest salary Employee by each department=========");
-		Map<String,Optional<Employee>> map = list.stream().collect(Collectors.groupingBy(e->e.department,
+		Map<String,Optional<Employee>> map = list.
+				stream().
+				collect(Collectors.groupingBy(e->e.department,
 				Collectors.maxBy(Comparator.comparing(Employee::salary))));
 		
 		map.forEach((key,value)->System.out.println(key + " "+value.get()));

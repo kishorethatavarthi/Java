@@ -3,6 +3,7 @@ package com.learnings.streams;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 //Remove null values from list of values
@@ -13,7 +14,7 @@ public class StreamExample13 {
 		);
 		
 		list.stream().
-		filter(x -> x!=null).
+		filter(Objects::nonNull).
 		collect(Collectors.toList())
 		.forEach(System.out::println);
 	}

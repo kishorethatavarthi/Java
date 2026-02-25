@@ -7,7 +7,7 @@ public class VTExample2 {
 	public static void main(String[] args) throws InterruptedException {
 		List<Thread> threads = new ArrayList<>();
 
-		for (int i = 0; i < 1000; i++) { // keep small for readable output
+		for (int i = 0; i < 1000; i++) {
 			int id = i;
 
 			Thread t = Thread.ofVirtual().name("vt-", id).start(() -> {

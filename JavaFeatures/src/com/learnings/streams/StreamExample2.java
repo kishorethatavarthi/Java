@@ -15,7 +15,7 @@ public class StreamExample2 {
 				       .stream()
 				       .filter(e->e.getValue()==1)
 				       .map(Map.Entry::getKey)
-				       .findAny()
+				       .findFirst()
 				       .orElse(null);
 		System.out.println(ch);
 

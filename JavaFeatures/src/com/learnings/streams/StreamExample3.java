@@ -10,7 +10,7 @@ public class StreamExample3 {
 	public static void main(String[] args) {
 		System.out.println("=============1============");
 		String str = "aa bb cc aa bb c d ee";
-		String[] arr = str.split(" ");
+		String[] arr = str.split("\\s+");
 		Map<String,Long> map = Arrays.stream(arr).
 				collect(Collectors.groupingBy(c->c,LinkedHashMap::new,Collectors.counting()));
 		map.forEach((key,value)-> System.out.println(key + " "+value));

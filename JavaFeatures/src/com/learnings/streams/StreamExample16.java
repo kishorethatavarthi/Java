@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-//Get distinct characters from a list of strings
+//Get distinct characters from a list of strings in the order
 public class StreamExample16 {
 	public static void main(String[] args) {
 		List<String> list = List.of("kishor","rvr","vinay");
-		Set<Character> set =list.stream()
+		Set<Character> set = list.stream()
 				                .flatMap(x->x.chars().mapToObj(ch->(char)ch))
 				                .sorted()
 		                        .collect(Collectors.toCollection(LinkedHashSet::new));
