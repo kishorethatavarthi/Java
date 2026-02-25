@@ -17,11 +17,11 @@ public class OptionalExample3 {
 
 		System.out.println("========================");
 		Optional<Integer> op3 = Optional.ofNullable(25);
-		op3.filter(x -> x >= 18).ifPresent(System.out::println);
+		op3.filter(x -> x >= 18).ifPresent(System.out::println);//25
 
 		System.out.println("========================");
 		Optional<Integer> op4 = Optional.ofNullable(null);
-		op4.filter(x -> x >= 18).ifPresent(System.out::println);
+		op4.filter(x -> x >= 18).ifPresent(System.out::println);//doesnt print anything and no error
 
 		System.out.println("========================");
 		List<Optional<String>> list = List.of(Optional.of("A"), Optional.empty(), Optional.of("B"));
